@@ -1,0 +1,20 @@
+  <ion-header>
+      <ion-navbar color="dark">
+        <ion-title>
+          MMTasks
+        </ion-title>
+      </ion-navbar>
+      <ion-searchbar [(ngModel)]="filtreChoisi"></ion-searchbar>
+    </ion-header>
+    
+    <ion-content>
+        <ion-list>
+            <ion-item *ngFor="let task of tasks" [ngClass]="{postitDone : task.done}" class="postit">
+                <ion-icon style="color: red" name="close" (tap)="removeTask(task._id)" item-start></ion-icon>
+                <h2>{{ task.title }}</h2>
+                <p>{{ task.task }}</p>
+                <ion-icon style="color: green" name="checkbox-outline" (tap)="setStatusTask(task._id, !task.done)" item-end></ion-icon>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    

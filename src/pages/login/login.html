@@ -1,0 +1,48 @@
+<ion-slides pager>
+
+  <ion-slide style="background-color: yellow">
+    <img src="../assets/imgs/pencil.png" id="logoLogin">
+    <h1>Login</h1>
+    <p style="color: red">{{errorL}}</p>
+
+    <form>
+      <ion-list>
+          <ion-item>
+            <ion-input placeholder="Username" [(ngModel)]="username" name="username" value="username" required="" autofocus=""></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="password" placeholder="Password" [(ngModel)]="password" name="password" value="password" required=""></ion-input>
+          </ion-item>
+      </ion-list>
+      <button ion-button full type="submit" (tap)="login()">Connection</button>
+    </form>
+
+    <p>Don't have an account ?</p>
+    <p>Swipe right <ion-icon name="arrow-round-forward"></ion-icon></p>
+  </ion-slide>
+
+  <ion-slide style="background-color: yellow">
+    <img src="../assets/imgs/pencil.png" id="logoLogin">
+    <h1>Register</h1>
+    <p style="color: red">{{errorR}}</p>
+
+    <form>
+      <ion-list>
+          <ion-item>
+            <ion-input placeholder="Your username" [(ngModel)]="username1" name="username1" required=""></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-input type="password" placeholder="Your password" [(ngModel)]="password1" name="password1" required=""></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Retype your password" [(ngModel)]="password2" name="password2" required=""></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button full type="submit" (tap)="register()">Create my account</button>
+    </form>
+    
+    <p>I already have an account.</p>
+    <p><ion-icon name="arrow-round-back"></ion-icon> Swipe left </p>
+  </ion-slide>
+
+</ion-slides>

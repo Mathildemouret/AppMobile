@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="dark">
+      <ion-title>Add a new Task</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form>
+      <ion-list>
+          <ion-item>
+            <ion-label color="primary">Title</ion-label>
+            <ion-input placeholder="Task Title" [(ngModel)]="title" name="title" value="title" required="" autofocus=""></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary">Task</ion-label>
+              <ion-input type="text" placeholder="Task to do..." [(ngModel)]="task" name="task" value="task" required=""></ion-input>
+          </ion-item>
+      </ion-list>
+      <button ion-button full type="submit" (tap)="addTask()">Add</button>
+    </form>
+  </ion-content>

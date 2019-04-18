@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import { newTaskPage } from '../newTask/newTask';
+import { logoutPage } from '../logout/logout';
+import { tasksPage } from '../tasks/tasks';
+import { loginPage } from '../login/login';
 
 @Component({
   templateUrl: 'tabs.html'
 })
-export class TabsPage {
+export class tabsPage {
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab1Root = tasksPage;
+  tab2Root = newTaskPage;
+  tab3Root = logoutPage;
 
-  constructor() {
-
+  constructor( public navCtrl: NavController ) {
+    if( localStorage.getItem("loggedUser") ) {
+      this.navCtrl.push(loginPage);
+    }
   }
 }

@@ -1,8 +1,7 @@
 {
-  "name": "FTasks",
-  "app_id": "",
-  "type": "ionic-angular",
+  "name": "MMTasks",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular"
 }

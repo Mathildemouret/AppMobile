@@ -14,3 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'Courier New', Courier, monospace;
+    src: url('https://fonts.googleapis.com/css?family=Courier%20New');
+}
+
+.postit{
+    font-family: 'Courier New', Courier, monospace;
+}
