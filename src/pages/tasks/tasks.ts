@@ -27,7 +27,7 @@ export class tasksPage {
         author : sessionStorage.getItem("loggedUser")
       };
 
-      this.http.post('http://localhost:8030/getAllTasksFromAuthor/', requete)
+      this.http.post('http://appwebpolytechpartie1.herokuapp.com/getAllTasksFromAuthor/', requete)
         .map(res => res.json())
         .subscribe(res => {
           resolve(res.tasks);
@@ -42,7 +42,7 @@ export class tasksPage {
         _id : _id
       };
   
-      this.http.post('http://localhost:8030/removeTask', requete )
+      this.http.post('http://appwebpolytechpartie1.herokuapp.com/removeTask', requete )
         .subscribe(res => {
           this.getAllTasksFromAuthor().then((data)=>
           {
@@ -61,7 +61,7 @@ export class tasksPage {
         done : done
       };
     
-      this.http.post('http://localhost:8030/setStatusTask', requete )
+      this.http.post('http://appwebpolytechpartie1.herokuapp.com/setStatusTask', requete )
       .subscribe(res => {
         this.getAllTasksFromAuthor().then((data)=>
         {

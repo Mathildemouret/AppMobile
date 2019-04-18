@@ -28,7 +28,7 @@ export class newTaskPage {
         task : this.task
       };
 
-      this.http.post('http://localhost:8030/addTask/', requete)
+      this.http.post('http://appwebpolytechpartie1.herokuapp.com/addTask/', requete)
         .subscribe(res => {
           window.location.reload();
           resolve(res);

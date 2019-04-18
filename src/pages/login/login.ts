@@ -41,7 +41,7 @@ export class loginPage {
         password : this.password
       };
 
-      this.http.post('http://localhost:8030/getPasswordOfLogin/', requete)
+      this.http.post('http://appwebpolytechpartie1.herokuapp.com/getPasswordOfLogin/', requete)
         .map(res => res.json())
         .subscribe(res => {
           if( res.password != res.passwordToTest ){
@@ -70,7 +70,7 @@ export class loginPage {
           password : this.password2
         };
 
-        this.http.post('http://localhost:8030/register/', requete)
+        this.http.post('http://appwebpolytechpartie1.herokuapp.com/register/', requete)
           .map(res => res.json())
           .subscribe(res => {
             if( !res.available ){
