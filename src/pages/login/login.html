@@ -2,7 +2,7 @@
 
   <ion-slide style="background-color: rgb(235, 95, 95)">
     <img src="../assets/imgs/pencil.png" id="logoLogin">
-    <h1>Login</h1>
+    <h1>Connection</h1>
     <p style="color: red">{{errorL}}</p>
 
     <form>
@@ -17,13 +17,13 @@
       <button ion-button full type="submit" (tap)="login()">Connection</button>
     </form>
 
-    <p>Don't have an account ?</p>
-    <p>Swipe right <ion-icon name="arrow-round-forward"></ion-icon></p>
+    <p>Tu n'as pas de compte ?</p>
+    <p>Swipe à droite <ion-icon name="arrow-round-forward"></ion-icon></p>
   </ion-slide>
 
   <ion-slide style="background-color: rgb(235, 95, 95)">
     <img src="../assets/imgs/pencil.png" id="logoLogin">
-    <h1>Register</h1>
+    <h1>Crée ton compte</h1>
     <p style="color: red">{{errorR}}</p>
 
     <form>
@@ -38,11 +38,11 @@
             <ion-input type="password" placeholder="Retype your password" [(ngModel)]="password2" name="password2" required=""></ion-input>
         </ion-item>
       </ion-list>
-      <button ion-button full type="submit" (tap)="register()">Create my account</button>
+      <button ion-button full type="submit" (tap)="register()">Enregistrer</button>
     </form>
     
-    <p>I already have an account.</p>
-    <p><ion-icon name="arrow-round-back"></ion-icon> Swipe left </p>
+    <p>J'ai déjà un compte..</p>
+    <p><ion-icon name="arrow-round-back"></ion-icon> Swipe à gauche </p>
   </ion-slide>
 
 </ion-slides>
